@@ -1793,3 +1793,50 @@ footer {
     }
 
 }
+/* ===============================
+   JAVASCRIPT INTERACTIONS
+================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Active navigation link */
+
+.nav-links a.active {
+    color: var(--terracotta);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* Button click effect */
+
+.primary-button.clicked,
+.outline-button.clicked,
+.whatsapp-button.clicked,
+.nav-button.clicked {
+    transform: scale(0.96);
+}
+
+
+/* Page loading */
+
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
